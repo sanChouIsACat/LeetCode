@@ -39,10 +39,11 @@ public:
 
     int l = getNearestNum(numIdxVec, left);
     int r = getNearestNum(numIdxVec, right, l);
+
     if (r == numIdxVec.size() || numIdxVec[r] > right) {
-      return r - l + 1;
-    } else {
       return r - l;
+    } else {
+      return r - l + 1;
     }
   }
 };
